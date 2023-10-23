@@ -30,7 +30,7 @@ jobs:
       run: |
        cd ..
        haxelib run lime setup android
-       haxelib run lime build android
+       haxelib run lime build Project.xml android
     
     - name: upload artifact
       uses: actions/upload-artifact@v2

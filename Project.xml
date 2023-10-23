@@ -8,16 +8,6 @@
     
     <java path="output/Main.java"/>
     
-    <android>
-        <app name="Rapping'" package="com.megagamer69.rapping"/>
-        
-        <source path="source"/>
-    </android>
-    
-    <windows if="cpp">
-        <app title="rapping" file="debug"/>
-    </windows>
-    
     <assets path="assets" include="*"/>
     <source path="source" include="*"/>
 </project>
