@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    <app main="com.megagamer69.rapping" path="bin" file="debug"/>
+    <meta name="Rapping'" package="com.megagamer69.rapping" company="megagamer69" version="0.0.1b"/>
+    
+    <window width="1280" height="720" if="mobile"/>
+    <window width="853" height="480" if="desktop"/>
+    
+    <java path="output/Main.java"/>
+    
+    <android>
+        <app name="Rapping'" package="com.megagamer69.rapping"/>
+        
+        <source path="source"/>
+    </android>
+    
+    <windows if="cpp">
+        <app title="rapping" file="debug"/>
+    </windows>
+    
+    <assets path="assets" include="*"/>
+    <source path="source" include="*"/>
+</project>
