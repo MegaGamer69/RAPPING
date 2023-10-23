@@ -1,0 +1,38 @@
+name: Build APK and EXE
+
+on: workflow_dispatch
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+    
+    - name: setup Haxe
+      uses: krdlab/setup-haxe@v1
+      with:
+        haxe-version: 'latest'
+    
+    - name: compile
+      run: |
+       mkdir output
+       cd source
+       haxe -java ../output/Main.java
+    
+    - name: set up Lime
+      run: haxelib install lime
+      continue-on-error: true
+    
+    - name: build
+      run: |
+       cd ..
+       haxelib run lime setup android
+       haxelib run lime build android
+    
+    - name: upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: bin
