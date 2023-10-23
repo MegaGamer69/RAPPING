@@ -17,6 +17,7 @@ jobs:
     
     - name: compile
       run: |
+       haxelib install hxjava
        mkdir output
        cd source
        haxe -java ../output/Main.java
