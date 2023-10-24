@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-    <app main="com.megagamer69.rapping" path="bin" file="debug"/>
-    <meta name="Rapping'" package="com.megagamer69.rapping" company="megagamer69" version="0.0.1b"/>
+    <app title="Rapping'" packageName="com.megagamer69.rapping" company="megagamer69" main="Main" path="bin" file="debug" />
     
-    <window width="1280" height="720" if="mobile"/>
-    <window width="853" height="480" if="desktop"/>
+    <window width="1280" height="720" if="mobile" />
+    <window width="853" height="480" if="desktop" />
     
-    <assets path="assets" include="*"/>
-    <source path="source" include="*"/>
+    <assets path="assets" include="*" />
+    <source path="source" include="*" />
+    
+    <classpath path="source" />
 </project>
