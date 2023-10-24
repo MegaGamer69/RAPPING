@@ -20,10 +20,10 @@ jobs:
        haxelib install hxjava
        mkdir output
        cd source
-       haxe -java
+       haxe -java ../output/Main.java
     
-    - name: set up Lime
-      run: haxelib install lime
+    - name: set up dependencies
+      run: haxelib install lime && haxelib install openfl
       continue-on-error: true
     
     - name: build

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
-    <meta title="Rapping in Roleplay City" package="com.megagamer69.rapping" version="1.0.0" />
+    <meta title="Rapping'" package="com.megagamer69.rapping" version="1.0.0" />
     <app main="Main" file="Main" />
     <window if="android" width="800" height="600" resizeable="true" orientation="landscape" />
 
