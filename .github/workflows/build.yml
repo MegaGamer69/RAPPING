@@ -20,7 +20,7 @@ jobs:
        haxelib install hxjava
        mkdir output
        cd source
-       haxe -java ../output/Main.java
+       haxe -java
     
     - name: set up Lime
       run: haxelib install lime
@@ -28,8 +28,9 @@ jobs:
     
     - name: build
       run: |
-       haxelib run lime setup android
-       haxelib run lime build ../project.xml android
+       cd ..
+       lime setup android
+       lime build android
     
     - name: upload artifact
       uses: actions/upload-artifact@v2
