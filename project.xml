@@ -6,8 +6,6 @@
     <window width="1280" height="720" if="mobile"/>
     <window width="853" height="480" if="desktop"/>
     
-    <java path="output/Main.java"/>
-    
     <assets path="assets" include="*"/>
     <source path="source" include="*"/>
 </project>
