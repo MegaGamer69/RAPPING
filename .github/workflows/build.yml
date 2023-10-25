@@ -29,8 +29,8 @@ jobs:
     - name: build
       run: |
        cd ..
-       haxelib run lime setup android
-       haxelib run lime build android
+       lime setup android
+       lime build android --app-version="4.0.0-${{ github.run_id }}" --non-interactive
     
     - name: upload artifact
       uses: actions/upload-artifact@v2
