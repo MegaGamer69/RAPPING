@@ -28,7 +28,7 @@ jobs:
     
     - name: build
       run: |
-       lime setup android
+       haxelib run lime config ANDROID_SETUP true
        haxelib run lime setup android
        haxelib run lime build project.xml android --app-version="4.0.0-${{ github.run_id }}" --non-interactive
     
