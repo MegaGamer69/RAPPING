@@ -23,7 +23,7 @@ jobs:
        haxe -java ../output/Main.java
     
     - name: set up dependencies
-      run: haxelib install lime && haxelib install openfl
+      run: haxelib install lime 8.1.0 && haxelib install openfl && lime --version
       continue-on-error: true
     
     - name: build
