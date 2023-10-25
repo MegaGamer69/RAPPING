@@ -4,7 +4,6 @@
     <app main="Main" file="Main" />
     <window if="android" width="800" height="600" resizeable="true" orientation="landscape" />
 
-    <haxelib name="flixel" />
     <haxelib name="openfl" />
     <haxelib name="lime" />
 
