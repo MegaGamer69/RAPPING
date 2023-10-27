@@ -2,8 +2,15 @@
 <project>
     <meta title="Rapping'" package="com.megagamer69.rapping" version="1.0.0" />
     <app main="Main" file="Main" />
-    <window if="android" width="800" height="600" resizeable="true" orientation="landscape" />
-
+    
+    <section if="android">
+        <config:android install-location="preferExternal" />
+        <config:android permission="android.permission.INTERNET" />
+        <config:android permission="android.permission.READ_EXTERNAL_STORAGE" />
+        <config:android target-sdk-version="16" />
+        <window if="android" width="800" height="600" resizeable="true" orientation="landscape" />
+    </section>
+    
     <haxelib name="openfl" />
     <haxelib name="lime" />
 
