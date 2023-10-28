@@ -29,11 +29,13 @@ jobs:
     - name: build
       run: |
        haxelib run lime setup android
+       haxelib run lime config ANDROID_SDK $ANDROID_SDK_ROOT
+       haxelib run lime config ANDROID_NDK_ROOT $ANDROID_NDK_ROOT
        haxelib run lime config ANDROID_SETUP true
-       haxelib run lime build project.xml android --app-version="4.0.0-${{ github.run_id }}" --non-interactive
+       haxelib run lime build project.xml android -Dci
     
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: build
-        path: bin
+        path: .
