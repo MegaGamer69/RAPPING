@@ -27,7 +27,7 @@ class Main {
         super();
         
         // check the intro state if is not null
-        if(intro != null) {
+        if(state != null) {
             init();
         }
     }
@@ -42,7 +42,7 @@ class Main {
         var stageW:Int = Lib.current.stageWidth;
         var stageH:Int = Lib.current.stageHeight;
         
-        if zoom = -1 {
+        if(zoom == -1) {
             ratioX = stageW / width;
             ratioY = stageH / height;
             
