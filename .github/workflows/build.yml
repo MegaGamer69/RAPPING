@@ -10,7 +10,7 @@ jobs:
     - name: checkout code
       uses: actions/checkout@v3
     
-    - name: setup Haxe
+    - name: set up Haxe
       uses: krdlab/setup-haxe@v1.5.1
       with:
         haxe-version: '4.3.2'
@@ -23,7 +23,7 @@ jobs:
        haxe -java ../output/Main.java
     
     - name: set up dependencies
-      run: haxelib install lime 8.1.0 && haxelib install openfl && lime --version
+      run: haxelib install lime 8.1.0 && lime --version
       continue-on-error: true
     
     - name: build

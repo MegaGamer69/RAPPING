@@ -4,13 +4,14 @@ import flixel.FlxGame;
 import flixel.FlxState;
 import openfl.Assets;
 import openfl.Lib;
+import openfl.Sprite;
 
 /**
  *  @MegaGamerOtario(coder)
  *  this game is inspired on Friday Night Funkin'
 **/
 
-class Main {
+class Main extends Sprite {
     // a FlxGame settings
     var width:Int = 1280;
     var height:Int = 720;
