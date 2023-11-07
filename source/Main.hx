@@ -24,19 +24,6 @@ class Main extends Sprite {
     
     var intro:Class<FlxState> = IntroState;
     
-    public function new() {
-        super();
-        
-        // check the intro state if is not null
-        if(state != null) {
-            init();
-        }
-    }
-    
-    public function main():Void {
-        Lib.current.addChild(new Main());
-    }
-    
     public function setup():Void {
         addChild(new FlxGame(width, height, intro, zoom, fpsRate, skipSplash, startFull));
         
