@@ -37,7 +37,7 @@ class Main extends Sprite {
         Lib.current.addChild(new Main());
     }
     
-    public static function setup():Void {
+    public function setup():Void {
         addChild(new FlxGame(width, height, intro, zoom, fpsRate, skipSplash, startFull));
         
         var stageW:Int = Lib.current.stageWidth;
