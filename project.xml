@@ -11,7 +11,6 @@
         <window if="android" width="800" height="600" resizeable="true" orientation="landscape" />
     </section>
     
-    <haxelib name="openfl" />
     <haxelib name="lime" />
 
     <source path="source" />
