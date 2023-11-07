@@ -12,7 +12,7 @@
     </section>
     
     <haxelib name="lime" />
-    <haxelib name="open" />
+    <haxelib name="openfl" />
     <haxelib name="flixel"/>
 
     <source path="source" />
