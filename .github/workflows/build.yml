@@ -63,7 +63,7 @@ jobs:
     - name: build
       run: |
        haxelib run lime setup windows
-       haxelib run lime build windows
+       haxelib run lime project.xml build windows
     
     - name: upload artifact
       uses: actions/upload-artifact@v3
