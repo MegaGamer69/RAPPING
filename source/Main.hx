@@ -4,7 +4,7 @@ import flixel.FlxGame;
 import flixel.FlxState;
 import openfl.Assets;
 import openfl.Lib;
-import openfl.Sprite;
+import openfl.display.Sprite;
 
 /**
  *  @MegaGamerOtario(coder)

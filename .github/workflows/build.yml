@@ -39,3 +39,34 @@ jobs:
       with:
         name: build
         path: .
+    
+  windows:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: checkout code
+      uses: krdlab/setup-haxe@v1.5.1
+      with:
+        haxe-version: '4.3.2'
+    
+    - name: compile
+      run: |
+       haxelib install hxjava
+       mkdir output
+       cd source
+       haxe -java ../output/Main.java
+    
+    - name: set up dependencies
+      run: haxelib install lime 8.1.0 && haxelib install openfl 9.3.1 && haxelib install flixel 5.4.1
+      continue-on-error: true
+    
+    - name: build
+      run: |
+       haxelib run lime setup windows
+       haxelib run lime build windows
+    
+    - name: upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: build
+        path: .

@@ -8,7 +8,11 @@
         <config:android permission="android.permission.INTERNET" />
         <config:android permission="android.permission.READ_EXTERNAL_STORAGE" />
         <config:android target-sdk-version="16" />
-        <window if="android" width="800" height="600" resizeable="true" orientation="landscape" />
+        <window width="800" height="600" resizeable="true" orientation="landscape" />
+    </section>
+    
+    <section if="windows">
+        <window width="800" height="600" resizeable="true" />
     </section>
     
     <haxelib name="lime" />
