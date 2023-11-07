@@ -23,7 +23,7 @@ jobs:
        haxe -java ../output/Main.java
     
     - name: set up dependencies
-      run: haxelib install lime 8.1.0 && lime --version
+      run: haxelib install lime 8.1.0 && haxelib install openfl 9.3.1 && haxelib install flixel 5.4.1
       continue-on-error: true
     
     - name: build

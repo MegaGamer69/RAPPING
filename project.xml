@@ -12,6 +12,8 @@
     </section>
     
     <haxelib name="lime" />
+    <haxelib name="open" />
+    <haxelib name="flixel"/>
 
     <source path="source" />
     <assets path="assets" />
