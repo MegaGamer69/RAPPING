@@ -1,6 +1,7 @@
 package;
 
 import flixel.FlxGame;
+import flixel.FlxBasic;
 import flixel.FlxState;
 import openfl.Assets;
 import openfl.Lib;
@@ -24,20 +25,11 @@ class Main extends Sprite {
     
     var intro:Class<FlxState> = IntroState;
     
-    public function setup():Void {
+    override public function create():Void {
+        start();
+    }
+    
+    public function start():Void {
         addChild(new FlxGame(width, height, intro, zoom, fpsRate, skipSplash, startFull));
-        
-        var stageW:Int = Lib.current.stageWidth;
-        var stageH:Int = Lib.current.stageHeight;
-        
-        if(zoom == -1) {
-            ratioX = stageW / width;
-            ratioY = stageH / height;
-            
-            zoom = Math.min(ratioX, ratioY);
-            
-            width = Math.ceil(stageW / zoom);
-            height = Math.ceil(stageH / zoom);
-        }
     }
 }
