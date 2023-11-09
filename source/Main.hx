@@ -25,7 +25,7 @@ class Main extends Sprite {
     
     var intro:Class<FlxState> = IntroState;
     
-    override public function create():Void {
+    public function new() {
         start();
     }
     

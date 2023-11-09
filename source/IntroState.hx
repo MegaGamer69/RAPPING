@@ -22,7 +22,7 @@ class IntroState extends FlxState {
     }
     
     override public function update(elapsed:Float):Void {
-        
+        trace("olá");
     }
     
     private function skipIntro():Void {
