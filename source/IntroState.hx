@@ -41,5 +41,6 @@ class IntroState extends FlxState {
     
     private function initIntro(msgText:String):Void {
         var text:FlxText = new FlxText(0, 0, 0, msgText, 8, true);
+        add(text);
     }
 }

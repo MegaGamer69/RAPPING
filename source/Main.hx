@@ -15,7 +15,6 @@ import openfl.display.Sprite;
 class Main extends Sprite {
     // a FlxGame settings
     var fpsRate:Int = 60;
-    var zoom:Float = -1;
     var ratioX:Float = 0;
     var ratioY:Float = 0;
     var skipSplash:Bool = false;
@@ -24,10 +23,11 @@ class Main extends Sprite {
     var intro:Class<FlxState> = IntroState;
     
     public function new() {
+        super(new Main());
         start();
     }
     
     public function start():Void {
-        addChild(new FlxGame(1280, 720, intro, zoom, fpsRate, skipSplash, startFull));
+        addChild(new FlxGame(1280, 720, intro, 0, fpsRate, skipSplash, startFull));
     }
 }
