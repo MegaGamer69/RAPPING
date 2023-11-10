@@ -6,6 +6,8 @@ import flixel.FlxBasic;
 import openfl.display.Sprite;
 import openfl.Lib;
 import flixel.text.FlxText;
+import flixel.input.touch.FlxTouch;
+import flixel.input.keyboard.FlxKeyList;
 
 /**
  *  @MegaGamerOtario(coder)
@@ -18,11 +20,19 @@ class IntroState extends FlxState {
     private var msg:String;
     
     override public function create():Void {
-        initIntro("hello!");
+        initIntro("hello! press ENTER to start");
     }
     
     override public function update(elapsed:Float):Void {
-        trace("olá");
+        if(FlxG.onMobile) {
+            if(FlxTouch.justPressed) {
+                skipIntro();
+            }
+        } else {
+            if(FlxKeyList.ENTER) {
+                skipIntro();
+            }
+        }
     }
     
     private function skipIntro():Void {
@@ -30,6 +40,6 @@ class IntroState extends FlxState {
     }
     
     private function initIntro(msgText:String):Void {
-        var text:FlxText = new(0, 0, 0, msgText, 8, true);
+        var text:FlxText = new FlxText(0, 0, 0, msgText, 8, true);
     }
 }
