@@ -19,7 +19,7 @@ class TitleState extends FlxState {
         camera.bgColor = FlxColor.BLACK;
     }
     
-    override public function update():Void {
+    override public function update(elapsed:Float):Void {
         
     }
 }
