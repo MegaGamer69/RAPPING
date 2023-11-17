@@ -36,7 +36,7 @@ class IntroState extends FlxState {
     }
     
     private function skipIntro():Void {
-        FlxG.switchTo(menu);
+        FlxState.switchTo(menu);
     }
     
     private function initIntro(msgText:String):Void {
