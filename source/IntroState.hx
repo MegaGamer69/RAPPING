@@ -25,18 +25,18 @@ class IntroState extends FlxState {
     
     override public function update(elapsed:Float):Void {
         if(FlxG.onMobile) {
-            if(FlxTouch.justPressed) {
+            if(FlxG.touches.justPressed) {
                 skipIntro();
             }
         } else {
-            if(FlxKeyList.ENTER) {
+            if(FlxG.keys.ENTER) {
                 skipIntro();
             }
         }
     }
     
     private function skipIntro():Void {
-        FlxState.switchTo(menu);
+        FlxG.switchState(menu);
     }
     
     private function initIntro(msgText:String):Void {
